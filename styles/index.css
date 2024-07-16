@@ -25,6 +25,8 @@
 }
 a{
     text-decoration: none;
+    user-select: none;
+    white-space: nowrap;
 }
 li{
     list-style: none;
@@ -41,10 +43,14 @@ button{
     cursor: pointer;
     transition: var(--transition);
     white-space: nowrap;
+    max-width: 175px;
 }
 button:hover{
     background-color: var(--button-color);
     color: var(--bg-color);
+}
+figure{
+    overflow: hidden; 
 }
 
 body{
@@ -56,6 +62,9 @@ body{
     width : 100%;
     max-width: var(--max-width);
     margin: 0 auto;
+}
+body>*{
+    box-shadow: 0 0 2px 1px var(--shadow-color);
 }
 /* header */
 .header{
@@ -190,7 +199,139 @@ header>.buttons{
     object-position: center;
     left :  -10px;
 }
-
 .banner>article>div>a:hover > img{
     left : calc(100% + 10px);
 }
+
+/* features */
+
+.features{
+    width: 100%;
+    display: flex; 
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: var(--gap);
+}
+.features>h3{
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 54px;
+    color: var(--text-color);
+    max-width: 500px;
+    text-align: center;
+}
+.features>.cards{
+    width : 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: var(--gap);
+    margin-top: 50px;
+}
+.features>button{
+    margin : 0 auto;
+}
+.card{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    gap: calc(var(--gap) / 2);
+    padding: var(--main-space);
+    max-width: 240px;
+    border-radius: var(--border-radius);
+    background-color: var(--card-background);
+    transition: var(--transition);
+}
+.card>img{
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+    object-position: center;
+}
+.card>h4{
+    font-weight: bold;
+    font-size: 22px;
+    color: var(--text-color);
+}
+.card>p{
+    font-size: 16px;
+    line-height: 26px;
+    color: var(--primary-text-color);
+}
+/* profesionals */
+
+.profesionals{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: var(--gap);
+}
+.profesionals>article{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: var(--gap);
+}
+.profesionals>article>h3{
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 54px;
+    color: var(--text-color);
+    max-width: 500px;
+}
+.profesionals>article>p{
+    font-size: 18px;
+    line-height: 22px;
+    color: var(--primary-text-color);
+    max-width: 400px;
+}
+/* managers */
+
+.managers{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: var(--gap);
+}
+.managers>article{
+    max-width : 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: calc(var(--gap) / 2);
+}
+.managers>article>p{
+    font-size: 16px;
+    color: var(--primary-text-color);
+}
+.managers>article>h3{
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 54px;
+    color: var(--text-color);
+}
+.managers>article>figure{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap: calc(var(--gap) / 2);
+}
+.managers>article>figure>figcaption{
+    font-size: 16px;
+    color: var(--primary-text-color);   
+    line-height: 26px;
+    max-width: 320px;
+}
+/*
+/*marketers */
+
