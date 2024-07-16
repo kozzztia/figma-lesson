@@ -11,6 +11,8 @@
     --font-size: 18px;
     --header-height : 80px;
     --main-space: 10px;
+    --gap: 40px;
+    --icon-size : 40px;
 
     /* animations */
     --transition : .3s ease-in-out;
@@ -49,7 +51,7 @@ body{
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    gap: var(--main-space);
+    gap: var(--gap);
 }
 .header>figure{
     display: flex;
@@ -72,13 +74,14 @@ body{
     margin-left: 10px;
 }
 .header>nav{
+    margin-left: auto;
 }
 .header>nav>ul{
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    gap: 40px;
+    gap: var(--gap);
 }
 .header>nav>ul>li>a{
     font-size: 14px;
