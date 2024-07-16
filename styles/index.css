@@ -3,11 +3,18 @@
     --bg-color: #fff;
     --text-color: #2F281E;
     --primary-text-color: #544837;
-    --link-color: #173A56;
+    --decoretion-color: #173A56;
     --button-color: #FF9900;
+    --shadow-color: #BCD0E5;
     /* sizes */
     --max-width: 1400px;
     --font-size: 18px;
+    --header-height : 80px;
+    --main-space: 10px;
+
+    /* animations */
+    --transition : .3s ease-in-out;
+    --radius : 4px;
 }
 
 *{
@@ -31,4 +38,82 @@ body{
     width : 100%;
     max-width: var(--max-width);
     margin: 0 auto;
+}
+/* header */
+.header{
+    max-width: var(--max-width);
+    min-height: var(--header-height);
+    padding: var(--main-space);
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: var(--main-space);
+}
+.header>figure{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: fit-content;
+}
+.header>figure>img{
+    width: var(--icon-size);
+    height: var(--icon-size);
+    object-fit: contain;
+    object-position: center;
+}
+.header>figure>figcaption{
+    font-weight: bold;
+    font-size: 30px;
+    line-height: 36px;
+    color: var(--decoretion-color);
+    margin-left: 10px;
+}
+.header>nav{
+}
+.header>nav>ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+}
+.header>nav>ul>li>a{
+    font-size: 14px;
+    line-height: 28px;
+    color: var(--text-color);
+    padding: 0 var(--main-space);
+    transition: var(--transition);
+}
+.header>nav>ul>li>a:hover{
+    color: var(--button-color);
+}
+
+.buttons{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: var(--main-space);
+}
+
+.buttons>button{
+    background-color: inherit;
+    color: var(--decoretion-color);
+    font-size: 16px;
+    font-weight: bold;
+    padding: var(--main-space);
+    border-radius: var(--radius);
+    border: none;
+    box-shadow: 0 0 2px 1px var(--shadow-color);
+    cursor: pointer;
+    transition: var(--transition);
+    white-space: nowrap;
+}
+
+.buttons>button:hover{
+    background-color: var(--button-color);
+    color: var(--bg-color);
 }
